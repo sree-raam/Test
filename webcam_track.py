@@ -3,6 +3,40 @@ import cv2
 from threading import Thread
 
 
+# ==========================================================
+# Real-Time YOLOv8 Object Tracking with ByteTrack
+#
+# Description:
+# This script performs real-time object detection and
+# multi-object tracking using YOLOv8 and ByteTrack.
+#
+# Features:
+# • Threaded webcam video capture
+# • YOLOv8 object detection
+# • ByteTrack multi-object tracking
+# • Persistent object identities
+# • Annotated visualization
+# • Low-latency video processing
+#
+# Applications:
+# • Object tracking research
+# • Smart surveillance systems
+# • Warehouse monitoring
+# • Industrial inspection
+# • Computer vision prototyping
+#
+# Hardware:
+# • Standard USB webcam
+# • Laptop integrated camera
+#
+# NOTE:
+# This implementation is intended for experimentation,
+# benchmarking, and educational purposes.
+#
+# Press 'q' to terminate the application.
+# ==========================================================
+
+
 # ---------------------------
 # Threaded Video Stream Class
 # ---------------------------
@@ -65,7 +99,6 @@ while True:
         annotated_frame
     )
 
-    # Exit application
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
 
